@@ -1,3 +1,13 @@
 # ME5205 Final Project: Suspension System
 
 See [`Project_Report.pdf`](Project_Report.pdf) for a more detailed description of the project.
+
+## Problem Statement
+
+Develop a suspension system for a four-wheel automotive, that can take extreme road conditions in a semi-urban setting, where there are potholes and bumps. Your goal is to help minimize the excitation transmitted to a rider in the vehicle.
+
+## Overview
+
+A seat suspension system can be used to attenuate high amplitude vibration transmitted from the road to the rider in the low frequency range and improve vehicle ride comfort. A linear seat suspension, consisting of a spring and a dashpot, can provide effective isolation when the excitation frequencies are larger than √2 times the natural frequency of the system. This is well documented in the literature [1-3]. From this, it is evident that reducing the stiffness of the system i.e the natural frequency, will give rise to a wider frequency range of isolation. However, a smaller stiffness will also result in a large static displacement between the vehicle floor and seat, and this trade-off between static displacement and isolation is well documented in [2]. This limitation can be overcome by using a Quasi-ZeroStiffness (QZS) isolator [4-6] as seat suspension. These isolators have a high static stiffness, and hence a small static displacement, alongwith a small dynamic stiffness, which results in a low natural frequency. This is generally achieved by configuring springs so that they act as a negative stiffness in parallel with a positive stiffness. Many QZS isolator mechanisms have been proposed, however for this project, a QZS isolator consisting of two inclined springs, and a vertical spring to stabilize the large displacement behaviour, is used. This vertical spring has a clearance, which is tuned to close exactly when the inclined springs reach a negative stiffness. Without the vertical spring, the isolator exhibits negative stiffness behaviour after the QZS regime, which can possibly cause a snap-through behaviour, leading to some damage to the supported structure.
+
+Hence, a QZS vibration isolator is proposed as seat suspension to improve the vehicle vibration performance, and to minimize the excitation transmitted to the rider. In the next section, the QZS vibration isolator, along with a brief description of its static analysis, is presented. This is then followed by establishing the vehicle seat-human coupled model, with the QZS isolator as seat suspension. The dynamic characteristics of this model subject to shock excitation are then obtained using numerical methods. These results are also compared with the case where a simple linear vibration isolator is used as seat suspension.
